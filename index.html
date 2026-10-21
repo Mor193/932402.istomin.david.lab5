@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе — Истомин Давид</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        textarea {
+            width: 100%;
+            min-height: 125px;
+            padding: 10px 14px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+            font-family: var(--font-mono);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: #faf5ff;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            resize: vertical;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: #ffffff;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08), 0 0 0 3px rgba(124, 58, 237, 0.18);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button id="theme-toggle-btn" class="control-btn theme-btn" type="button" aria-label="Переключить тему оформления">
+            Сменить тему
+        </button>
+        <h1>Истомин Давид Сергеевич</h1>
+        <p>Студент, цифровой художник и концепт-визуализатор</p>
+        <img src="./images/avatar.jpg" alt="Портрет Давида Истомина" width="180" height="180">
+        <nav class="nav-menu">
+            <a href="#skills">Навыки</a>
+            <a href="#hobbies">Хобби</a>
+            <a href="#places">Любимые места</a>
+            <a href="#projects">Проекты</a>
+            <a href="#about-art">Направление</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="skills">
+            <h2>Творческие навыки</h2>
+            <ul>
+                <li>Цифровая живопись и 2D-иллюстрация</li>
+                <li>3D-скульптинг персонажей и объектов окружения</li>
+                <li>Академический рисунок, анатомия и пространственная композиция</li>
+                <li>Работа со светотенью и теория цвета</li>
+            </ul>
+        </section>
+
+        <section id="hobbies">
+            <div class="section-header-row">
+                <h2>Мои хобби</h2>
+                <div class="hobbies-toolbar">
+                    <button id="add-hobby-btn" class="control-btn" type="button">
+                        Добавить хобби
+                    </button>
+                    <button id="toggle-view-btn" class="control-btn" type="button">
+                        Переключить вид
+                    </button>
+                    <button id="toggle-hobbies-btn" class="control-btn control-btn-danger" type="button">
+                        Скрыть хобби
+                    </button>
+                </div>
+            </div>
+
+            <div id="hobbies-container" class="hobbies-container view-grid">
+                <article class="hobby-card hobby-item">
+                    <div class="hobby-icon-wrapper">
+                        <img src="./images/sketch.jpg" alt="Цифровая живопись" class="hobby-img" width="80" height="80">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Цифровой скетчинг</h3>
+                        <p>Ежедневные быстрые зарисовки силуэтов, изучение световых схем и динамики поз.</p>
+                    </div>
+                </article>
+
+                <article class="hobby-card hobby-item">
+                    <div class="hobby-icon-wrapper">
+                        <img src="./images/keramika.jpg" alt="Керамика" class="hobby-img" width="80" height="80">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Авторская керамика</h3>
+                        <p>Лепка фактурных ваз и скульптурных миниатюр из глины с последующей ручной росписью глазурью.</p>
+                    </div>
+                </article>
+
+                <article class="hobby-card hobby-item">
+                    <div class="hobby-icon-wrapper">
+                        <img src="./images/photo.jpg" alt="Фотография" class="hobby-img" width="80" height="80">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Плёночная фотография</h3>
+                        <p>Уличная съёмка на механическую камеру 35мм с акцентом на геометрию архитектуры и тени.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="places">
+            <h2>Любимые места для вдохновения</h2>
+            <div class="places-grid">
+                <article class="place-card">
+                    <figure>
+                        <img src="./images/paris.jpg" alt="Лувр в Париже" width="300" height="200">
+                        <figcaption><h3>Лувр, Париж</h3></figcaption>
+                    </figure>
+                    <p lang="ru">Величайший музей мира со стеклянной пирамидой и колоссальной коллекцией классического искусства.</p>
+                </article>
+
+                <article class="place-card">
+                    <figure>
+                        <img src="./images/barselona.jpg" alt="Саграда Фамилия" width="300" height="200">
+                        <figcaption><h3>Саграда Фамилия, Барселона</h3></figcaption>
+                    </figure>
+                    <p lang="ru">Невероятная органика архитектуры Гауди, сочетающая готику, модерн и природные формы.</p>
+                </article>
+
+                <article class="place-card">
+                    <figure>
+                        <img src="./images/rome.jpg" alt="Колизей в Риме" width="300" height="200">
+                        <figcaption><h3>Колизей, Рим</h3></figcaption>
+                    </figure>
+                    <p lang="ru">Монументальный памятник античной архитектуры, вдохновляющий своими масштабами и историей.</p>
+                </article>
+
+                <article class="place-card">
+                    <figure>
+                        <img src="./images/inari.jpg" alt="Киото, Япония" width="300" height="200">
+                        <figcaption><h3>Храм Фусими Инари, Киото</h3></figcaption>
+                    </figure>
+                    <p lang="ru">Бесконечные ярко-красные ворота тории, создающие мощную пространственную перспективу.</p>
+                </article>
+
+                <article class="place-card">
+                    <figure>
+                        <img src="./images/fuji.jpg" alt="Гора Фудзи" width="300" height="200">
+                        <figcaption><h3>Гора Фудзи, Япония</h3></figcaption>
+                    </figure>
+                    <p lang="ru">Классический визуальный символ минимализма и гармонии в традиционной пейзажной живописи.</p>
+                </article>
+
+                <article class="place-card">
+                    <figure>
+                        <img src="./images/museum.jpg" alt="Эрмитаж в Санкт-Петербурге" width="300" height="200">
+                        <figcaption><h3>Эрмитаж, Санкт-Петербург</h3></figcaption>
+                    </figure>
+                    <p lang="ru">Барочная архитектура Зимнего дворца и залы с эталонными полотнами европейских мастеров.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Проекты и выставки</h2>
+            <ol class="projects-list">
+                <li class="project-card">
+                    <span class="favorite-badge">★ Избранное</span>
+                    <strong>Серия концепт-артов «Неоновый ренессанс»</strong>
+                    <p>Комплексная визуализация футуристического полиса с элементами классической архитектуры.</p>
+                </li>
+                <li class="project-card">
+                    <strong>Коллективная выставка «Цифровой штрих»</strong>
+                    <p>Экспозиция серии графических портретов в рамках межвузовского фестиваля.</p>
+                </li>
+                <li class="project-card">
+                    <strong>Артбук «Существа древних эпох»</strong>
+                    <p>Разработка бестиария и иллюстраций фантастической флоры и фауны.</p>
+                </li>
+                <li class="project-card">
+                    <strong>Концепт-арт для инди-игры</strong>
+                    <p>Проектирование визуального стиля главных персонажей и игровых локаций.</p>
+                </li>
+            </ol>
+        </section>
+
+        <aside id="about-art">
+            <h3>Любимое направление в искусстве</h3>
+            <p><strong>Цифровой сюрреализм и футуризм:</strong> гармоничное сочетание академических традиций живописи с технологичной визуализацией, создающее многослойные визуальные образы.</p>
+        </aside>
+
+        <section id="weather-stats">
+            <h2>Погода на уличных выставках</h2>
+            <div class="weather-dashboard">
+                <p class="weather-greeting">Приветствуем, <strong id="widget-user">Гость</strong>!</p>
+                
+                <div class="weather-grid">
+                    <div class="weather-item">
+                        <span class="weather-val" id="widget-avg-all">—</span>
+                        <span class="weather-lbl">Средняя температура</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-val" id="widget-warm-days">—</span>
+                        <span class="weather-lbl">Тёплых дней (&gt;20 °C)</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-val" id="widget-cold-days">—</span>
+                        <span class="weather-lbl">Холодных дней (≤10 °C)</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-val" id="widget-cold-avg">—</span>
+                        <span class="weather-lbl">Средняя в холодные дни</span>
+                    </div>
+                </div>
+
+                <div id="widget-notice" class="weather-notice" style="display: none;">
+                    <strong>Внимание:</strong> Рекомендуется предусмотреть навесы и воду для гостей
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Связаться со мной</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="user-name">Имя:</label>
+                    <input type="text" id="user-name" name="name" placeholder="Введите ваше имя" required>
+                </p>
+                <p>
+                    <label for="user-email">Email:</label>
+                    <input type="email" id="user-email" name="email" placeholder="example@mail.ru" required>
+                </p>
+                <p>
+                    <label for="user-message">Сообщение:</label>
+                    <textarea id="user-message" name="message" placeholder="Напишите ваше сообщение..." required></textarea>
+                </p>
+                <p>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Истомин Давид. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section, aside');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sections.forEach(s => s.classList.remove('active-section'));
+                    entry.target.classList.add('active-section');
+                }
+            });
+        }, { threshold: 0.25 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
